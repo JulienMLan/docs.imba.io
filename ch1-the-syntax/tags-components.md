@@ -2,7 +2,7 @@
 
 ## Creating a Component
 
-Use the keyword `tag` followed by a component name using the web-component naming convention. it must contain at least two words separated by a dash. `-` 
+Use the keyword `tag` followed by a component name using the web-component naming convention. it must contain at least two words separated by a dash. `-`
 
 ```ruby
 tag my-app
@@ -10,7 +10,7 @@ tag my-app
         <self>
             <h1> "Hello World!"
 
-imba.mount <App>
+imba.mount <my-app>
 
 ```
 
@@ -64,7 +64,7 @@ Use attributes as you would in HTML. Just remember to omit the quotes for dynami
 
 ```ruby
 let image = "images/200.png"
-tag App
+tag my-app
 	def render
 		<self>
 			<img src=image alt="placeholder">
@@ -78,7 +78,7 @@ Values from variables and objects can be injected right into the DOM elements. Y
 
 ```ruby
 let name = "World"
-tag App
+tag my-app
 	def render
 		<self>
 			<h1> "Hello {name.toUpperCase()}!"
@@ -117,7 +117,7 @@ tag app-pages
 [Play with this code on Scrimba](https://scrimba.com/c/cRqydLsD)
 
 If we would like to use data from a prop assigned to a parent component we cannot access it with the same prop symbol `@`   
-We could if we passed the prop value to the child through a new prop like this: `p=@p` , but we do not need to that. 
+We could if we passed the prop value to the child through a new prop like this: `p=@p` , but we do not need to that.
 
 In imba we can use `#context.title` to traverse up the component tree, and it will return the first matching property value on any parent element.
 
@@ -146,7 +146,7 @@ tag app-content
 			<p> #context.desc
 ```
 
-## 
+##
 
 ## Context
 
@@ -169,6 +169,3 @@ def functional-tag item
 ## Tag Properties
 
 ....
-
-
-
